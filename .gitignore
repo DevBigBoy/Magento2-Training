@@ -1,0 +1,72 @@
+# Magento 2 .gitignore
+
+# General system files
+.DS_Store
+Thumbs.db
+
+# Composer
+/vendor/
+/composer.lock
+
+# Magento generated files
+/generated/
+/pub/static/*
+!/pub/static/.htaccess
+/var/
+/pub/media/*
+!/pub/media/.htaccess
+
+# Environment config
+/app/etc/env.php
+/app/etc/config.php
+
+# Cache and logs
+/var/cache/
+/var/page_cache/
+/var/view_preprocessed/
+/var/log/
+/var/report/
+/var/session/
+
+# PHPUnit
+.phpunit.result.cache
+
+# IDE and editor files
+/.idea/
+/*.iml
+/.vscode/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# npm/yarn files (if frontend development is involved)
+node_modules/
+yarn.lock
+package-lock.json
+npm-debug.log
+
+# Grunt / Gulp / Frontend
+/.sass-cache/
+/.grunt/
+/bower_components/
+/pub/static/frontend/*
+/pub/static/adminhtml/*
+
+# Deployment-related
+/deploy/
+/auth.json
+/nginx.conf.sample
+/nginx.conf
+/apache.conf
+*.tar.gz
+
+# Custom scripts or temp files
+/scripts/*.sh
+*.log
+*.sql
+*.zip
+*.gz
+
+
+/pup/
