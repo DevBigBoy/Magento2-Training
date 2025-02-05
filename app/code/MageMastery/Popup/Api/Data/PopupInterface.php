@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace MageMastery\Popup\Api\Data;
 
+use MageMastery\Popup\Model\Popup;
+
 /**
  * Interface PopupInterface
  *
@@ -38,9 +40,9 @@ interface PopupInterface
      * Set Popup ID
      *
      * @param int $popupId
-     * @return $this
+     * @return PopupInterface
      */
-    public function setPopupId(int $popupId): self;
+    public function setPopupId(int $popupId): PopupInterface;
 
     /**
      * Get Popup Name
@@ -53,9 +55,9 @@ interface PopupInterface
      * Set Popup Name
      *
      * @param string $name
-     * @return $this
+     * @return PopupInterface
      */
-    public function setName(string $name): self;
+    public function setName(string $name): PopupInterface;
 
     /**
      * Get Popup Content
@@ -68,9 +70,9 @@ interface PopupInterface
      * Set Popup Content
      *
      * @param string $content
-     * @return $this
+     * @return PopupInterface
      */
-    public function setContent(string $content): self;
+    public function setContent(string $content): PopupInterface;
 
     /**
      * Get Popup Creation Time
@@ -83,9 +85,9 @@ interface PopupInterface
      * Set Popup Creation Time
      *
      * @param string $createdAt
-     * @return $this
+     * @return PopupInterface
      */
-    public function setCreatedAt(string $createdAt): self;
+    public function setCreatedAt(string $createdAt): PopupInterface;
 
     /**
      * Get Popup Modification Time
@@ -98,9 +100,9 @@ interface PopupInterface
      * Set Popup Modification Time
      *
      * @param string $updatedAt
-     * @return $this
+     * @return PopupInterface
      */
-    public function setUpdatedAt(string $updatedAt): self;
+    public function setUpdatedAt(string $updatedAt): PopupInterface;
 
     /**
      * Get Popup Active Status
@@ -113,9 +115,9 @@ interface PopupInterface
      * Set Popup Active Status
      *
      * @param bool $isActive
-     * @return $this
+     * @return PopupInterface
      */
-    public function setIsActive(bool $isActive): self;
+    public function setIsActive(bool $isActive): PopupInterface;
 
     /**
      * Get Popup Timeout
@@ -128,7 +130,7 @@ interface PopupInterface
      * Set Popup Timeout
      *
      * @param int $timeout
-     * @return $this
+     * @return PopupInterface
      */
-    public function setTimeout(int $timeout): self;
+    public function setTimeout(int $timeout): PopupInterface;
 }

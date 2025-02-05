@@ -19,13 +19,11 @@ use MageMastery\Popup\Model\ResourceModel\Popup as PopupResourceModel;
  */
 class Popup extends AbstractModel implements PopupInterface
 {
-    /**
-     * Model constructor
-     */
-    protected $_idFieldName = PopupResourceModel::FIELD_NAME;
-
     protected function _construct()
     {
+        $this->_eventPrefix = 'magemastery_popup';
+        $this->_eventObject = 'popup';
+        $this->_idFieldName =  PopupResourceModel::FIELD_NAME;
         $this->_init(PopupResourceModel::class);
     }
 
@@ -169,9 +167,9 @@ class Popup extends AbstractModel implements PopupInterface
      * Set Popup Timeout
      *
      * @param int $timeout
-     * @return $this
+     * @return PopupInterface
      */
-    public function setTimeout(int $timeout): self
+    public function setTimeout(int $timeout): PopupInterface
     {
         return $this->setData(self::TIMEOUT, $timeout);
     }
