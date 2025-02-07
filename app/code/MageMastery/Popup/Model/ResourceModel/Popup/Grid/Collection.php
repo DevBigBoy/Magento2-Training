@@ -1,4 +1,8 @@
 <?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
 
 declare(strict_types=1);
 
@@ -9,8 +13,6 @@ use Magento\Framework\Api\Search\AggregationInterface;
 use MageMastery\Popup\Model\ResourceModel\Popup\Collection as PopupCollection;
 use Magento\Framework\Event\ManagerInterface;
 use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
-
-
 
 class Collection extends PopupCollection implements SearchResultInterface
 {
@@ -46,6 +48,9 @@ class Collection extends PopupCollection implements SearchResultInterface
         $this->timeZone = $timeZone;
         parent::__construct($entityFactory, $logger, $fetchStrategy, $eventManager, $connection, $resource);
     }
+
+
+
 
     /**
      * @inheritDoc

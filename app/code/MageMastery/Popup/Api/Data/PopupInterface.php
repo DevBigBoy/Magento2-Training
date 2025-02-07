@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace MageMastery\Popup\Api\Data;
 
-use MageMastery\Popup\Model\Popup;
 
 /**
  * Interface PopupInterface

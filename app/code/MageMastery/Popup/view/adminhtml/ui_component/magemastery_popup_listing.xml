@@ -101,10 +101,17 @@
             </action>
         </massaction>
         <paging name="listing_paging"/>
+        <exportButton name="export_button"/>
     </listingToolbar>
 
     <columns name="magemastery_popup_columns">
         <settings>
+            <dndConfig>
+                <param name="enabled" xsi:type="boolean">true</param>
+                <param name="fixedX" xsi:type="boolean">false</param>
+                <param name="fixedY" xsi:type="boolean">true</param>
+                <param name="noSelectClass" xsi:type="string">_no-select</param>
+            </dndConfig>
             <editorConfig>
                 <param name="clientConfig" xsi:type="array">
                     <item name="saveUrl" xsi:type="url" path="magemastery_popup/popup/inlineEdit"/>
