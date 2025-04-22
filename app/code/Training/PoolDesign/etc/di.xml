@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Training\PoolDesign\Model\CodePoolValidation">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+                <item name="notEmpty" xsi:type="object">Training\PoolDesign\Model\CodeNotEmptyValidation</item>
+                <item name="length" xsi:type="object">Training\PoolDesign\Model\CodeLengthValidation</item>
+                <item name="alNum" xsi:type="object">Training\PoolDesign\Model\CodeAlnumValidation</item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>
