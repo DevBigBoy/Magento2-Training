@@ -1,0 +1,11 @@
+<?php /** @var \Adam\Checkout\Block\Index $block */ ?>
+
+<h1>Checkout Page</h1>
+
+<p>Welcome, <?= $block->getCustomerData()->getName() ?>!</p>
+
+<p>Items in your cart: <?= $block->getQuote()->getItemsCount() ?></p>
+
+<p>Total: <?= $block->getQuote()->getGrandTotal() ?></p>
+
+<!-- Add more HTML/PHP to display checkout info -->

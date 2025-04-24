@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="checkout"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+<!--        <referenceContainer name="content">-->
+<!--            <block-->
+<!--                class="Adam\Checkout\Block\Index"-->
+<!--                name="adam.checkout.index"-->
+<!--                template="Adam_Checkout::index.phtml"-->
+<!--                cacheable="false"-->
+<!--            />-->
+<!--        </referenceContainer>-->
+
+        <referenceBlock name="checkout.root">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="checkout" xsi:type="array">
+                                <item name="children" xsi:type="array">
+                                    <item name="steps" xsi:type="array">
+                                        <item name="children" xsi:type="array">
+                                            <item name="shipping-step" xsi:type="array">
+                                                <item name="children" xsi:type="array">
+                                                    <item name="shippingAddress" xsi:type="array">
+                                                        <item name="children" xsi:type="array">
+                                                            <item name="before-form" xsi:type="array">
+                                                                <item name="children" xsi:type="array">
+                                                                    <!-- before form fields | Start  Our Component -->
+                                                                    <item name="our-message" xsi:type="array">
+                                                                        <item name="component" xsi:type="string">Adam_Checkout/js/view/message</item>
+                                                                        <item name="config" xsi:type="array">
+                                                                            <item name="message" xsi:type="string" translate="true">
+                                                                                Hello, BigBoy Your New Message Above the Shipping Form. Welcome!
+                                                                            </item>
+                                                                        </item>
+                                                                    </item>
+                                                                    <!-- before form fields | EndOf Our Component -->
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                    <item name="sidebar" xsi:type="array">
+                                        <item name="children" xsi:type="array">
+                                            <item name="summary" xsi:type="array">
+                                                <item name="children" xsi:type="array">
+                                                    <item name="itemsBefore" xsi:type="array">
+                                                        <item name="children" xsi:type="array">
+                                                            <!-- Start Our2: merge your components here -->
+                                                            <item name="our-message" xsi:type="array">
+                                                                <item name="component" xsi:type="string">Adam_Checkout/js/view/message</item>
+                                                                <item name="config" xsi:type="array">
+                                                                    <item name="message" xsi:type="string" translate="true">
+                                                                        Hello, BigBoy Your New Message Above the Shipping Form. Welcome!
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                            <!-- End Our 2: merge your components here -->
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+        </referenceBlock>
+    </body>
+</page>
