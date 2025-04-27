@@ -1,0 +1,20 @@
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="Adam\WidgetsExample\Block\Widget\Test" id="adam_custom_widget_newsletter_signup">
+        <label>My New Widget NewsLetter Signup Form Block</label>
+        <description>This is a test widget!!!</description>
+        <parameters>
+            <parameter name="title" xsi:type="text" required="true" visible="true" sort_order="10">
+                <label>Label Test Widget</label>
+            </parameter>
+            <parameter name="description" xsi:type="text" sort_order="20" visible="true">
+                <label>Description</label>
+                <description>Enter a description for the widget.</description>
+            </parameter>
+            <parameter name="size" xsi:type="text" sort_order="30" visible="true">
+                <label>Size</label>
+                <description>Enter the size of the widget.</description>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
