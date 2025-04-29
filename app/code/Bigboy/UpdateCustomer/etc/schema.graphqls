@@ -1,0 +1,35 @@
+type Mutation {
+     sendCustomerEmailUpdateOtp(
+        input: SendCustomerEmailUpdateOtpInput!
+    ): SendCustomerEmailUpdateOtpOutput
+    @resolver(class: "\\CrocoIT\\CustomCustomer\\Model\\Resolver\\SendCustomerEmailUpdateOtp")
+    @doc(description: "Sends an OTP to the customer's new email address for verification.")
+
+
+    updateCustomerEmailWithOtp(
+        input: UpdateCustomerEmailWithOtpInput!
+    ): UpdateCustomerEmailWithOtpOutput
+    @resolver(class: "\\CrocoIT\\CustomCustomer\\Model\\Resolver\\UpdateCustomerEmail")
+    @doc(description: "Updates the customer's email and password after verifying the OTP.")
+}
+
+input SendCustomerEmailUpdateOtpInput {
+    email: String! @doc(description: "The customer's new email address.")
+}
+
+type SendCustomerEmailUpdateOtpOutput {
+    status: Boolean! @doc(description: "Indicates if the OTP was sent successfully.")
+    message: String! @doc(description: "A message detailing the result of the operation.")
+}
+
+
+input UpdateCustomerEmailWithOtpInput {
+    email: String! @doc(description: "The customer's new email address.")
+    password: String! @doc(description: "The customer's new password.")
+    otp: String! @doc(description: "The OTP sent to the customer's new email for verification.")
+}
+
+type UpdateCustomerEmailWithOtpOutput {
+    status: Boolean! @doc(description: "Indicates if the Customer Updated successfully.")
+    customer: Customer! @doc(description: "The updated customer information.")
+}

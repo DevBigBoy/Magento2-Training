@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Mail/etc/email_templates.xsd">
+    <template id="bigboy_update_customer_otp_email"
+              label="Bigboy - Customer OTP Email Template"
+              file="customer_otp_email.html"
+              type="html"
+              module="Bigboy_UpdateCustomer"
+              area="frontend"/>
+</config>

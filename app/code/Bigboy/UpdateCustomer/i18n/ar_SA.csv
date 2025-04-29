@@ -1,0 +1,6 @@
+"Hello %customer_name,","مرحباً %customer_name،"
+"You’ve requested to change your email address. Please use the following OTP (One Time Password) to verify your request:","لقد طلبت تغيير عنوان بريدك الإلكتروني. يرجى استخدام رمز التحقق التالي لتأكيد الطلب:"
+"This OTP is valid for 5 minutes.","رمز التحقق هذا صالح لمدة 5 دقائق."
+"If you did not request this, please ignore this email.","إذا لم تطلب هذا، يرجى تجاهل هذه الرسالة."
+"Thank you,","شكراً لك،"
+"Team","فريق العمل"
