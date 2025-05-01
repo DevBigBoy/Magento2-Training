@@ -1,0 +1,59 @@
+type Query {
+    productAttributeOptions(
+        attribute_code: String!
+        pageSize: Int = 20
+        currentPage: Int = 1
+        sort: AttributeOptionSortInput
+    ): AttributeOptionSearchResult
+    @resolver(class: "GraphqlEx\\ProductAttributes\\Model\\Resolver\\AttributeOptions")
+    @doc(description: "Returns EAV attribute options such as size or color as paginated and sortable label/value pairs.")
+
+    allProductAttributes(
+        pageSize: Int = 20
+        currentPage: Int = 1
+        sort: ProductAttributeSortInput
+    ): ProductAttributeSearchResult
+    @resolver(class: "GraphqlEx\\ProductAttributes\\Model\\Resolver\\AllProductAttributes")
+}
+
+type AttributeOptionSearchResult {
+    items: [AttributeOption]
+    total_count: Int
+    page_info: SearchResultPageInfo
+}
+
+type AttributeOption {
+    label: String
+    value: String
+}
+
+type SearchResultPageInfo {
+    page_size: Int
+    current_page: Int
+}
+
+enum SortEnum {
+    ASC
+    DESC
+}
+
+input AttributeOptionSortInput {
+    label: SortEnum
+    value: SortEnum
+}
+
+type ProductAttribute {
+    attribute_code: String!
+    frontend_label: String!
+    input_type: String!
+    default_value: String
+}
+type ProductAttributeSearchResult {
+    items: [ProductAttribute]
+    total_count: Int
+    page_info: SearchResultPageInfo
+}
+input ProductAttributeSortInput {
+    attribute_code: SortEnum
+    frontend_label: SortEnum
+}
