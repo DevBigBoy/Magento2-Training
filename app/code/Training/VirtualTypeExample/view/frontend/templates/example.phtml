@@ -1,0 +1,14 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+
+?>
+<?php $warehouse = $block->getViewModel()->getWarehouse($block->getRequest()); ?>
+
+<h2>virtual types in Magento 2 - Part #1</h2>
+
+
+<?php if (!$warehouse->isEmpty()): ?>
+<p>
+    <?= $warehouse->getName() . ': ' . $warehouse->getPostcode() ?>
+</p>
+<?php endif; ?>
